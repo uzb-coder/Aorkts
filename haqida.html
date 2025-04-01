@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadbir Rasmlari va Videolar</title>
+    <link rel="stylesheet" href="./rasmlar/logo.png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(45deg, #42a5f5, #1e88e5);
+            color: white;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin: 0;
+        }
+
+        header .logo {
+            margin-left: 20px;
+            width: 40px;
+            height: auto;
+        }
+
+        header p {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            margin: 40px auto;
+            width: 90%;
+            max-width: 900px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        h2, h3 {
+            color: #dc3545;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+        }
+        .big-video video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal img {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./rasmlar/logo.png" alt="Logo" class="logo"></a>
+        <p>Tadbir Rasmlari va Videolar</p></header>
+    <div class="container">
+        <h2>Hurmat va ehtirom kuni</h2>
+        <p class="content">Bu kun Vatan himoyachilarini xotirlash va qadrlash kuni hisoblanadi. Tadbirda faxriylarimizga hurmat bajo keltirildi va yosh avlod ularga hurmat ko'rsatdi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, laborum aperiam in, nihil iure modi, quo voluptatibus provident amet quod minima porro ea. Accusamus enim sapiente, sit eaque eos fuga!
+        Eveniet quisquam repudiandae eius omnis voluptates. Libero explicabo modi dolore nesciunt id debitis beatae porro nobis natus alias, aliquam suscipit labore eum neque possimus voluptates totam quia. Ab, repellendus praesentium.
+        Provident neque eius est voluptate dicta nostrum reiciendis consectetur iste. Ad vero fuga impedit possimus, quos eveniet, pariatur nemo earum cumque praesentium et aliquam autem facere dolorum amet rem. Quam.
+        Ea pariatur ullam quod. Repellendus consequatur necessitatibus minus odio vel error sint delectus, quas labore architecto vitae at hic provident quidem voluptates exercitationem dolorum! Soluta exercitationem quaerat eum repudiandae odio.
+        Eos doloremque maxime placeat nulla excepturi unde in cumque vel, iure modi asperiores adipisci at quod magnam veniam dolorem voluptatibus, pariatur beatae suscipit corporis minima officiis quo? Ea, distinctio earum?
+        Maxime quae qui incidunt labore in maiores reprehenderit odit, debitis tempora, porro architecto ipsum perferendis nisi voluptate obcaecati non. Quisquam quibusdam fugit consequatur molestias ullam corrupti perspiciatis itaque reiciendis quidem?
+        Quisquam saepe placeat ea similique sit vel tenetur nam aperiam cupiditate reprehenderit error perspiciatis doloremque enim assumenda quia velit veritatis, fugiat quo. Reiciendis atque porro maxime consequuntur nam saepe amet?
+        Ipsa exercitationem, velit numquam ex aperiam qui a vero inventore dicta magni sunt. Voluptatem odit sed dolorem enim est hic aperiam facilis facere blanditiis nisi, provident eveniet cupiditate omnis dicta!
+        In perferendis fuga, obcaecati laboriosam magnam ea sint tempore autem possimus maiores voluptates exercitationem? Ducimus vitae temporibus vel, doloremque fuga cumque, eos quod quas provident iste ipsum minus optio quasi.
+        Placeat, exercitationem adipisci eaque, commodi repudiandae dolor aut vitae iure deserunt vero dolorum rem a repellendus quo architecto fuga voluptates. Sapiente voluptates deserunt accusantium, quas consequuntur ratione nesciunt quia. Rem.
+        Vero soluta et maxime fugit unde illo vel itaque modi. Ullam ipsam facilis voluptas natus magni. Eos praesentium dicta voluptate mollitia expedita quas velit hic omnis eius. Porro, quod aliquam!
+        Quam ullam voluptatibus non eaque ad sapiente ea corporis dolore sunt deleniti, incidunt atque rerum commodi iure aliquid cum mollitia iusto culpa. At deserunt dicta est in, doloribus asperiores alias.
+        Odit obcaecati exercitationem saepe sapiente consequuntur dolorum ut animi eaque, sunt quibusdam alias cupiditate odio tempore quaerat architecto aperiam blanditiis ipsum voluptatem minima aut quam adipisci velit. Culpa, alias provident?
+        Est ut molestiae reiciendis dicta pariatur dolore, fuga culpa? Voluptatum laborum debitis aspernatur ex at aliquid animi, ut esse, reiciendis a consectetur sapiente fuga officiis impedit nesciunt velit obcaecati quos.
+        Aliquid eligendi tempore fugit quisquam laboriosam debitis sed ut dolore eos porro ex consequatur, voluptates vitae fuga nesciunt architecto facere repellat molestias doloremque, mollitia eum error? Reiciendis aperiam architecto eligendi.
+        Harum, debitis incidunt rerum ad labore eius, at adipisci molestiae aliquam suscipit est officiis dolore. Aliquam quia odit error, recusandae excepturi enim beatae laudantium sint officiis, tempora quasi illo ad.
+        Delectus at tenetur nihil minima error, iste voluptate sequi adipisci aut, laborum, quia est beatae explicabo sunt nobis unde dolorum? Distinctio exercitationem aliquid iure nisi eos quia maxime quidem odit.
+        Voluptatem eaque incidunt ipsam assumenda nobis quia ipsum commodi quibusdam architecto officia culpa iure dolorum, consectetur quisquam in cupiditate quod exercitationem molestiae, repudiandae delectus? Cupiditate est id beatae repudiandae eaque?
+        Architecto, totam? Nam atque et architecto rerum adipisci dignissimos dicta excepturi beatae. Voluptas dignissimos asperiores consequuntur nihil velit maiores reprehenderit dicta magnam. Nihil itaque consequatur ipsum quibusdam tempora facilis maxime?
+        Nihil, corrupti quod. Quod, aspernatur! Provident dignissimos architecto minus asperiores, quaerat sed at inventore iure placeat cum, eveniet accusamus? Odit ducimus amet error labore est tenetur provident magnam libero voluptas.</p>
+
+        <h3>Tadbir rasmlari</h3>
+        <div class="carousel">
+            <div class="carousel-images">
+                <!-- Caruselga qo'shilgan rasmlar -->
+                <img src="/rasmlar/01.jpg" alt="Tadbir rasmi 1" onclick="openModal('/rasmlar/01.jpg')">
+                <img src="/rasmlar/02.jpg" alt="Tadbir rasmi 2" onclick="openModal('/rasmlar/02.jpg')">
+                <img src="/rasmlar/03.jpg" alt="Tadbir rasmi 3" onclick="openModal('/rasmlar/03.jpg')">
+                <img src="/rasmlar/04.jpg" alt="Tadbir rasmi 4" onclick="openModal('/rasmlar/04.jpg')">
+                <img src="/rasmlar/05.jpg" alt="Tadbir rasmi 5" onclick="openModal('/rasmlar/05.jpg')">
+                <img src="/rasmlar/06.jpg" alt="Tadbir rasmi 6" onclick="openModal('/rasmlar/06.jpg')">
+                <img src="/rasmlar/07.jpg" alt="Tadbir rasmi 7" onclick="openModal('/rasmlar/07.jpg')">
+                <img src="/rasmlar/08.jpg" alt="Tadbir rasmi 8" onclick="openModal('/rasmlar/08.jpg')">
+                <img src="/rasmlar/09.jpg" alt="Tadbir rasmi 9" onclick="openModal('/rasmlar/09.jpg')">
+                <img src="/rasmlar/10.jpg" alt="Tadbir rasmi 10" onclick="openModal('/rasmlar/10.jpg')">
+            </div>
+            <span class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</span>
+            <span class="carousel-control next" onclick="moveSlide(1)">&#10095;</span>
+        </div>
+
+        <h3>Lorem Ipsum - Matn</h3>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
+
+        <h3>Tadbir videolari</h3>
+        <div class="big-video">
+            <video controls>
+                <source src="tadbir_video.mp4" type="video/mp4">
+                Sizning brauzeringiz ushbu videoni qo‘llab-quvvatlamaydi.
+            </video>
+        </div>
+    </div>
+
+    <!-- Modal for image preview -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Modal Image">
+    </div>
+
+    <script>
+        let index = 0;
+        const images = document.querySelector('.carousel-images');
+        const totalImages = document.querySelectorAll('.carousel-images img').length;
+
+        function moveSlide(direction) {
+            index += direction;
+            if (index < 0) {
+                index = totalImages - 1;
+            } else if (index >= totalImages) {
+                index = 0;
+            }
+            images.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Avtomatik carusel o'zgarishi
+        setInterval(() => {
+            moveSlide(1);
+        }, 3000);
+
+        // Modalni ochish
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modal.style.display = "flex";
+            modalImage.src = imageSrc;
+        }
+
+        // Modalni yopish
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
