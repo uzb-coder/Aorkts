@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tadbir Rasmlari va Videolar</title>
+    <title>Тадбир Расмлари ва Видеолар</title>
     <link rel="stylesheet" href="./rasmlar/logo.png">
     <style>
         body {
@@ -13,6 +14,7 @@
             padding: 0;
             color: #333;
         }
+
         header {
             background: linear-gradient(45deg, #42a5f5, #1e88e5);
             color: white;
@@ -42,6 +44,7 @@
             text-align: center;
             margin: 0;
         }
+
         .container {
             margin: 40px auto;
             width: 90%;
@@ -51,16 +54,19 @@
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
+
         .carousel {
             position: relative;
             width: 100%;
-            height: 300px;
+            height: 450px;
             overflow: hidden;
         }
+
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
         }
+
         .carousel-images img {
             width: 100%;
             height: 100%;
@@ -68,6 +74,7 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
         .carousel-control {
             position: absolute;
             top: 50%;
@@ -79,27 +86,34 @@
             cursor: pointer;
             transform: translateY(-50%);
         }
+
         .prev {
             left: 10px;
         }
+
         .next {
             right: 10px;
         }
-        h2, h3 {
+
+        h2,
+        h3 {
             color: #dc3545;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
+
         .content {
             font-size: 16px;
             line-height: 1.6;
             color: #333;
             text-align: justify;
         }
+
         .big-video video {
             width: 100%;
             height: auto;
             border-radius: 10px;
         }
+
         .modal {
             display: none;
             position: fixed;
@@ -112,12 +126,14 @@
             align-items: center;
             z-index: 1000;
         }
+
         .modal img {
             width: 80%;
             height: auto;
             object-fit: contain;
             border-radius: 10px;
         }
+
         .modal .close {
             position: absolute;
             top: 10px;
@@ -128,34 +144,70 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <a href="./index.html"><img src="./rasmlar/logo.png" alt="Logo" class="logo"></a>
-        <p>Tadbir Rasmlari va Videolar</p></header>
+        <p>Тадбир Расмлари ва Видеолар</p>
+    </header>
     <div class="container">
-        <h2>Hurmat va ehtirom kuni</h2>
-        <p class="content">Bu kun Vatan himoyachilarini xotirlash va qadrlash kuni hisoblanadi. Tadbirda faxriylarimizga hurmat bajo keltirildi va yosh avlod ularga hurmat ko'rsatdi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, laborum aperiam in, nihil iure modi, quo voluptatibus provident amet quod minima porro ea. Accusamus enim sapiente, sit eaque eos fuga!
-        Eveniet quisquam repudiandae eius omnis voluptates. Libero explicabo modi dolore nesciunt id debitis beatae porro nobis natus alias, aliquam suscipit labore eum neque possimus voluptates totam quia. Ab, repellendus praesentium.
-        Provident neque eius est voluptate dicta nostrum reiciendis consectetur iste. Ad vero fuga impedit possimus, quos eveniet, pariatur nemo earum cumque praesentium et aliquam autem facere dolorum amet rem. Quam.
-        Ea pariatur ullam quod. Repellendus consequatur necessitatibus minus odio vel error sint delectus, quas labore architecto vitae at hic provident quidem voluptates exercitationem dolorum! Soluta exercitationem quaerat eum repudiandae odio.
-        Eos doloremque maxime placeat nulla excepturi unde in cumque vel, iure modi asperiores adipisci at quod magnam veniam dolorem voluptatibus, pariatur beatae suscipit corporis minima officiis quo? Ea, distinctio earum?
-        Maxime quae qui incidunt labore in maiores reprehenderit odit, debitis tempora, porro architecto ipsum perferendis nisi voluptate obcaecati non. Quisquam quibusdam fugit consequatur molestias ullam corrupti perspiciatis itaque reiciendis quidem?
-        Quisquam saepe placeat ea similique sit vel tenetur nam aperiam cupiditate reprehenderit error perspiciatis doloremque enim assumenda quia velit veritatis, fugiat quo. Reiciendis atque porro maxime consequuntur nam saepe amet?
-        Ipsa exercitationem, velit numquam ex aperiam qui a vero inventore dicta magni sunt. Voluptatem odit sed dolorem enim est hic aperiam facilis facere blanditiis nisi, provident eveniet cupiditate omnis dicta!
-        In perferendis fuga, obcaecati laboriosam magnam ea sint tempore autem possimus maiores voluptates exercitationem? Ducimus vitae temporibus vel, doloremque fuga cumque, eos quod quas provident iste ipsum minus optio quasi.
-        Placeat, exercitationem adipisci eaque, commodi repudiandae dolor aut vitae iure deserunt vero dolorum rem a repellendus quo architecto fuga voluptates. Sapiente voluptates deserunt accusantium, quas consequuntur ratione nesciunt quia. Rem.
-        Vero soluta et maxime fugit unde illo vel itaque modi. Ullam ipsam facilis voluptas natus magni. Eos praesentium dicta voluptate mollitia expedita quas velit hic omnis eius. Porro, quod aliquam!
-        Quam ullam voluptatibus non eaque ad sapiente ea corporis dolore sunt deleniti, incidunt atque rerum commodi iure aliquid cum mollitia iusto culpa. At deserunt dicta est in, doloribus asperiores alias.
-        Odit obcaecati exercitationem saepe sapiente consequuntur dolorum ut animi eaque, sunt quibusdam alias cupiditate odio tempore quaerat architecto aperiam blanditiis ipsum voluptatem minima aut quam adipisci velit. Culpa, alias provident?
-        Est ut molestiae reiciendis dicta pariatur dolore, fuga culpa? Voluptatum laborum debitis aspernatur ex at aliquid animi, ut esse, reiciendis a consectetur sapiente fuga officiis impedit nesciunt velit obcaecati quos.
-        Aliquid eligendi tempore fugit quisquam laboriosam debitis sed ut dolore eos porro ex consequatur, voluptates vitae fuga nesciunt architecto facere repellat molestias doloremque, mollitia eum error? Reiciendis aperiam architecto eligendi.
-        Harum, debitis incidunt rerum ad labore eius, at adipisci molestiae aliquam suscipit est officiis dolore. Aliquam quia odit error, recusandae excepturi enim beatae laudantium sint officiis, tempora quasi illo ad.
-        Delectus at tenetur nihil minima error, iste voluptate sequi adipisci aut, laborum, quia est beatae explicabo sunt nobis unde dolorum? Distinctio exercitationem aliquid iure nisi eos quia maxime quidem odit.
-        Voluptatem eaque incidunt ipsam assumenda nobis quia ipsum commodi quibusdam architecto officia culpa iure dolorum, consectetur quisquam in cupiditate quod exercitationem molestiae, repudiandae delectus? Cupiditate est id beatae repudiandae eaque?
-        Architecto, totam? Nam atque et architecto rerum adipisci dignissimos dicta excepturi beatae. Voluptas dignissimos asperiores consequuntur nihil velit maiores reprehenderit dicta magnam. Nihil itaque consequatur ipsum quibusdam tempora facilis maxime?
-        Nihil, corrupti quod. Quod, aspernatur! Provident dignissimos architecto minus asperiores, quaerat sed at inventore iure placeat cum, eveniet accusamus? Odit ducimus amet error labore est tenetur provident magnam libero voluptas.</p>
-
-        <h3>Tadbir rasmlari</h3>
+        <h2 style="text-align: center;">Ҳурмат ва эҳтиром куни</h2>
+        <p class="content">Бу кун Ватан ҳимоячиларини хотирлаш ва қадрлаш куни ҳисобланади. Тадбирда фахрийларимизга
+            ҳурмат бажо келтирилди ва ёш авлод уларга ҳурмат кўрсатди. Лорем, ипсум долор сит амет сонсестетур
+            адиписисинг элит. Лаудантиум, лаборум апериам ин, ниҳил иуре моди, қуо волуптатибус провидент амет қуод
+            минима порро эа. Ассусамус эним сапиенте, сит эақуэ эос фуга!z
+            Эвениет қуисқуам репудиандаэ эиус омнис волуптатес. Либеро эхплисабо моди долоре нессиунт ид дебитис беатаэ
+            порро нобис натус алиас, алиқуам суссипит лаборе эум неқуэ поссимус волуптатес тотам қуиа. Аб, репеллендус
+            праэсентиум.
+            Провидент неқуэ эиус эст волуптате диста нострум реисиендис сонсестетур исте. Ад веро фуга импедит поссимус,
+            қуос эвениет, париатур немо эарум сумқуэ праэсентиум эт алиқуам аутем фасере долорум амет рем. Қуам.
+            Эа париатур уллам қуод. Репеллендус сонсеқуатур несесситатибус минус одио вел эррор синт делестус, қуас
+            лаборе арчитесто витаэ ат ҳис провидент қуидем волуптатес эхерситатионем долорум! Солута эхерситатионем
+            қуаэрат эум репудиандаэ одио.
+            Эос долоремқуэ махиме пласеат нулла эхсептури унде ин сумқуэ вел, иуре моди аспериорес адиписси ат қуод
+            магнам вениам долорем волуптатибус, париатур беатаэ суссипит сорпорис минима оффисиис қуо? Эа, дистинстио
+            эарум?
+            Махиме қуаэ қуи инсидунт лаборе ин маиорес репреҳендерит одит, дебитис темпора, порро арчитесто ипсум
+            перферендис ниси волуптате обсаэсати нон. Қуисқуам қуибусдам фугит сонсеқуатур молестиас уллам соррупти
+            персписиатис итақуэ реисиендис қуидем?
+            Қуисқуам саэпе пласеат эа симилиқуэ сит вел тенетур нам апериам супидитате репреҳендерит эррор персписиатис
+            долоремқуэ эним ассуменда қуиа велит веритатис, фугиат қуо. Реисиендис атқуэ порро махиме сонсеқуунтур нам
+            саэпе амет?
+            Ипса эхерситатионем, велит нумқуам эх апериам қуи а веро инвенторе диста магни сунт. Волуптатем одит сед
+            долорем эним эст ҳис апериам фасилис фасере бландитиис ниси, провидент эвениет супидитате омнис диста!
+            Ин перферендис фуга, обсаэсати лабориосам магнам эа синт темпоре аутем поссимус маиорес волуптатес
+            эхерситатионем? Дусимус витаэ темпорибус вел, долоремқуэ фуга сумқуэ, эос қуод қуас провидент исте ипсум
+            минус оптио қуаси.
+            Пласеат, эхерситатионем адиписси эақуэ, соммоди репудиандаэ долор аут витаэ иуре десерунт веро долорум рем а
+            репеллендус қуо арчитесто фуга волуптатес. Сапиенте волуптатес десерунт ассусантиум, қуас сонсеқуунтур
+            ратионе нессиунт қуиа. Рем.
+            Веро солута эт махиме фугит унде илло вел итақуэ моди. Уллам ипсам фасилис волуптас натус магни. Эос
+            праэсентиум диста волуптате моллитиа эхпедита қуас велит ҳис омнис эиус. Порро, қуод алиқуам!
+            Қуам уллам волуптатибус нон эақуэ ад сапиенте эа сорпорис долоре сунт деленити, инсидунт атқуэ рерум соммоди
+            иуре алиқуид сум моллитиа иусто сулпа. Ат десерунт диста эст ин, долорибус аспериорес алиас.
+            Одит обсаэсати эхерситатионем саэпе сапиенте сонсеқуунтур долорум ут аними эақуэ, сунт қуибусдам алиас
+            супидитате одио темпоре қуаэрат арчитесто апериам бландитиис ипсум волуптатем минима аут қуам адиписси
+            велит. Сулпа, алиас провидент?
+            Эст ут молестиаэ реисиендис диста париатур долоре, фуга сулпа? Волуптатум лаборум дебитис аспернатур эх ат
+            алиқуид аними, ут эссе, реисиендис а сонсестетур сапиенте фуга оффисиис импедит нессиунт велит обсаэсати
+            қуос.
+            Алиқуид элигенди темпоре фугит қуисқуам лабориосам дебитис сед ут долоре эос порро эх сонсеқуатур,
+            волуптатес витаэ фуга нессиунт арчитесто фасере репеллат молестиас долоремқуэ, моллитиа эум эррор?
+            Реисиендис апериам арчитесто элигенди.
+            Ҳарум, дебитис инсидунт рерум ад лаборе эиус, ат адиписси молестиаэ алиқуам суссипит эст оффисиис долоре.
+            Алиқуам қуиа одит эррор, ресусандаэ эхсептури эним беатаэ лаудантиум синт оффисиис, темпора қуаси илло ад.
+            Делестус ат тенетур ниҳил минима эррор, исте волуптате сеқуи адиписси аут, лаборум, қуиа эст беатаэ
+            эхплисабо сунт нобис унде долорум? Дистинстио эхерситатионем алиқуид иуре ниси эос қуиа махиме қуидем одит.
+            Волуптатем эақуэ инсидунт ипсам ассуменда нобис қуиа ипсум соммоди қуибусдам арчитесто оффисиа сулпа иуре
+            долорум, сонсестетур қуисқуам ин супидитате қуод эхерситатионем молестиаэ, репудиандаэ делестус? Супидитате
+            эст ид беатаэ репудиандаэ эақуэ?
+            Арчитесто, тотам? Нам атқуэ эт арчитесто рерум адиписси дигниссимос диста эхсептури беатаэ. Волуптас
+            дигниссимос аспериорес сонсеқуунтур ниҳил велит маиорес репреҳендерит диста магнам. Ниҳил итақуэ сонсеқуатур
+            ипсум қуибусдам темпора фасилис махиме?
+            Ниҳил, соррупти қуод. Қуод, аспернатур! Провидент дигниссимос арчитесто минус аспериорес, қуаэрат сед ат
+            инвенторе иуре пласеат сум, эвениет ассусамус? Одит дусимус амет эррор лаборе эст тенетур провидент магнам
+            либеро волуптас.</п>
+        <h3>Тадбир расмлари</h3>
         <div class="carousel">
             <div class="carousel-images">
                 <!-- Caruselga qo'shilgan rasmlar -->
@@ -165,19 +217,15 @@
                 <img src="/rasmlar/04.jpg" alt="Tadbir rasmi 4" onclick="openModal('/rasmlar/04.jpg')">
                 <img src="/rasmlar/05.jpg" alt="Tadbir rasmi 5" onclick="openModal('/rasmlar/05.jpg')">
                 <img src="/rasmlar/06.jpg" alt="Tadbir rasmi 6" onclick="openModal('/rasmlar/06.jpg')">
-                <img src="/rasmlar/07.jpg" alt="Tadbir rasmi 7" onclick="openModal('/rasmlar/07.jpg')">
-                <img src="/rasmlar/08.jpg" alt="Tadbir rasmi 8" onclick="openModal('/rasmlar/08.jpg')">
-                <img src="/rasmlar/09.jpg" alt="Tadbir rasmi 9" onclick="openModal('/rasmlar/09.jpg')">
-                <img src="/rasmlar/10.jpg" alt="Tadbir rasmi 10" onclick="openModal('/rasmlar/10.jpg')">
             </div>
             <span class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</span>
             <span class="carousel-control next" onclick="moveSlide(1)">&#10095;</span>
         </div>
-
-        <h3>Lorem Ipsum - Matn</h3>
-        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
-
-        <h3>Tadbir videolari</h3>
+        <h3>Лорем Ипсум - Матн</h3>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+            Praesent mauris.</p>
+        <h3>Тадбир видеолари</h3>
         <div class="big-video">
             <video controls>
                 <source src="tadbir_video.mp4" type="video/mp4">
@@ -185,18 +233,15 @@
             </video>
         </div>
     </div>
-
     <!-- Modal for image preview -->
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img id="modalImage" src="" alt="Modal Image">
     </div>
-
     <script>
         let index = 0;
         const images = document.querySelector('.carousel-images');
         const totalImages = document.querySelectorAll('.carousel-images img').length;
-
         function moveSlide(direction) {
             index += direction;
             if (index < 0) {
@@ -206,7 +251,6 @@
             }
             images.style.transform = `translateX(-${index * 100}%)`;
         }
-
         // Avtomatik carusel o'zgarishi
         setInterval(() => {
             moveSlide(1);
