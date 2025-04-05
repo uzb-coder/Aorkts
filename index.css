@@ -15,7 +15,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 3px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-radius: 8px;
     margin: 20px;
 }
 
@@ -116,7 +116,6 @@ h3 {
 
 .footer {
     background: linear-gradient(45deg, #42a5f5, #1e88e5);
-    /* Header bilan mos rang */
     color: white;
     padding: 30px;
     text-align: center;
@@ -143,17 +142,13 @@ header {
     align-items: center;
     justify-content: space-between;
     position: sticky;
-    /* Sticky qilish */
     top: 0;
-    /* Ekran tepasiga yopishib qolish */
     z-index: 1000;
-    /* Tezda ko'rinishda bo'lishi uchun */
     margin: 0;
-    /* Oraliqni olib tashlash */
 }
 
 header .logo {
-    margin-left: 20px;
+    margin-left: 10px;
     width: 40px;
     height: auto;
 }
