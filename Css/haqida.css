@@ -56,6 +56,73 @@ header {
     border: 1px solid #eaeaea;
     transition: all 0.3s ease;
   }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+.big-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 /* Sarlavhalar */
 h2, h3 {
     color: #e74c3c;
@@ -148,18 +215,4 @@ h2, h3 {
     color: #ffffff;
     transition: transform 0.3s, color 0.3s;
   }
-  
-  .social-links a:hover {
-    color: #ffcc00;
-    transform: scale(1.2);
-  }
-  
-  .tadbir_rasmi {
-    text-align: center;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
+    
