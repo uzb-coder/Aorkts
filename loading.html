@@ -3,104 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organization Info</title>
+    <title>Testni Boshlash</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            width: 80%;
-            max-width: 1200px;
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            display: none;
         }
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            flex: 1;
-            border-right: 1px solid #e0e0e0;
+
+        .progress-bar {
+            width: 0%;
+            height: 20px;
+            background-color: #4caf50;
+            border-radius: 10px;
+            transition: width 1s;
         }
-        .card:last-child {
-            border-right: none;
-        }
-        .logo {
-            width: 100%;
-            height: 100px;
-            margin-bottom: 15px;
-            border: 2px solid #b03a2e; /* Border color */
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .logo img {
-            width: 100%;
-            height: auto;
-        }
-        .info {
-            margin-bottom: 15px;
-        }
-        .info-label {
+
+        #timer {
+            font-size: 20px;
             font-weight: bold;
-            color: #555;
-        }
-        .info-value {
-            color: #333;
-        }
-        .map {
-            width: 100%;
-            height: 300px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <div style="text-align:center; margin-top: 30px; display: flex; justify-content: center; gap: 10px;">
+        <a href="#test-section" class="btn btn-success" onclick="startTest()">Testni Boshlash</a>
+        <a href="#lesson-info" class="btn btn-secondary">Orqaga Qaytish</a>
+    </div>
 
-<div class="container">
-    <div class="card">
-        <div class="logo">
-            <img src="https://via.placeholder.com/100" alt="Logo"> <!-- Replace with your image URL -->
-        </div>
-        <div class="info">
-            <div class="info-label">Asoslangan</div>
-            <div class="info-value">1994</div>
-        </div>
-        <div class="info">
-            <div class="info-label">Rahbar</div>
-            <div class="info-value">Mironov Sergey Aleksandrovich</div>
+    <div id="test-section" style="display:none; text-align:center; margin-top: 50px;">
+        <h3>Testni Boshlash</h3>
+        <div id="timer">20:00</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
         </div>
     </div>
-    <div class="card">
-        <div class="info">
-            <div class="info-label">Manzil</div>
-            <div class="info-value">g. Tashkent, Sergeliyskiy rayon, m. Uychumlar, shaxardosh, n. 76A, Tashkent, Uzbekistan</div>
-        </div>
-        <div class="info">
-            <div class="info-label">Kontaktlar</div>
-            <div class="info-value">71 215 58 23</div>
-        </div>
-        <div class="info">
-            <div class="info-label">Email</div>
-            <div class="info-value"><a href="mailto:rhc_uzb@mail.ru">rhc_uzb@mail.ru</a></div>
-        </div>
-        <div class="map">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d477.4875491865706!2d69.27695031660689!3d41.30707707926768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b8f3b6bbdc9b99%3A0xe18f4c7356b7a465!2z0JvQu9C40LrQvtC90YvQuSDQv9C-0LrQvtC90LrQuCDQv9C-0LvRhtC-0LzQvtCz0YDQvtC90LjRgtC10YHRgtC10L3RgtC10YHQu9C-0YDQvtC60L7QvdC-0Ysg0L_QvtC90L7QvdC-0YDQvtC60L7QvdC-0Yg!5e0!3m2!1sen!2s!4v1683033200585!5m2!1sen!2s" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
-    </div>
-</div>
 
+    <script>
+        let timeLeft = 1200; // 20 daqiqa (20 * 60 sekund)
+        let timerInterval;
+        let progressBarInterval;
+
+        function startTest() {
+            // Testni ko'rsatish va tugmalarni yashirish
+            document.getElementById('test-section').style.display = 'block';
+            document.querySelector('.btn').style.display = 'none';
+            
+            // Progress barni boshlash
+            document.querySelector('.progress-container').style.display = 'block';
+            startTimer();
+            startProgressBar();
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(function() {
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+                document.getElementById('timer').innerText = `${formatTime(minutes)}:${formatTime(seconds)}`;
+                timeLeft--;
+
+                if (timeLeft < 0) {
+                    clearInterval(timerInterval);
+                    alert('Vaqt tugadi!');
+                    // Testni yakunlash va progress barni to'xtatish
+                    clearInterval(progressBarInterval);
+                }
+            }, 1000);
+        }
+
+        function formatTime(time) {
+            return time < 10 ? '0' + time : time;
+        }
+
+        function startProgressBar() {
+            let progress = 0;
+            progressBarInterval = setInterval(function() {
+                progress += 100 / 1200; // 1200 sekund uchun progress
+                document.getElementById('progress-bar').style.width = progress + '%';
+
+                if (progress >= 100) {
+                    clearInterval(progressBarInterval);
+                }
+            }, 1000);
+        }
+
+        // Orqaga qaytish va progressni to'xtatish
+        function resetTest() {
+            clearInterval(timerInterval);
+            clearInterval(progressBarInterval);
+            document.getElementById('timer').innerText = '20:00';
+            document.getElementById('progress-bar').style.width = '0%';
+        }
+    </script>
 </body>
 </html>
